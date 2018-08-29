@@ -14,7 +14,7 @@ class BlogArticles(models.Model):
     publish = models.DateTimeField(default=timezone.now)
 
 
-    #倒序显示
+    #倒序显示,最新的排在上面
     class Meta:
         ordering = ("-publish",)
     def __str__(self):
